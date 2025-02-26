@@ -1,0 +1,49 @@
+.header {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+
+  & a {
+    color: inherit;
+  }
+
+  & svg {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 5px;
+    transition: all 0.3s ease-in-out;
+
+    &.instagram:hover {
+      color: blueviolet;
+    }
+
+    &.whatsapp:hover {
+      color: green;
+    }
+
+    &.phone:hover {
+      color: skyblue;
+    }
+
+    &.telegram:hover {
+      color: rgb(13, 122, 164);
+    }
+  }
+}

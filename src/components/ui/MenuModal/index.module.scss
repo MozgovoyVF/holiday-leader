@@ -1,0 +1,48 @@
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 110%;
+  height: 100lvh;
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+}
+
+.window {
+  width: 80%;
+  padding-top: 100px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%; /* Ширина элемента 100% */
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: white;
+  font-size: 20px;
+  text-align: start;
+  width: 100%; /* Полная ширина */
+  word-wrap: break-word; /* Позволяем переносу длинных слов */
+
+  & svg {
+    flex: 0 0 30px;
+    width: 30px;
+  }
+}

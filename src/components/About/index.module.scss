@@ -1,0 +1,77 @@
+.main {
+  width: 100%;
+  height: 100vh;
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 100px;
+  background-color: rgba($color: #000000, $alpha: 0.3);
+}
+
+.image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title {
+  font-size: 32px;
+  color: var(--main_gold);
+  font-family: "Proxima", serif;
+  max-width: 50%;
+}
+
+.slogan {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  font-size: 30px;
+  color: var(--main_white);
+  font-family: "Vasek", serif;
+
+  & svg {
+    font-size: 40px;
+  }
+
+  & b {
+    color: var(--main_gold);
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: flex-end;
+  flex: 1 1 100%;
+  padding-bottom: 200px;
+
+  & .text {
+    display: flex;
+    gap: 5px;
+    padding: 5px;
+    font-size: 18px;
+    color: var(--main_white);
+    font-family: "Proxima", serif;
+
+    & svg {
+      color: var(--main_gold);
+    }
+
+    & b {
+      color: var(--main_gold);
+    }
+  }
+
+  & .text:first-child {
+    border-top: 3px solid var(--main_gold);
+  }
+}

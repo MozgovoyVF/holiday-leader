@@ -1,0 +1,302 @@
+.formContainer {
+  flex: 1 1 100%;
+  padding: 5px;
+}
+
+.form {
+  height: 100%;
+}
+
+.step {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.label {
+  color: var(--main_white);
+  font-family: "Proxima", serif;
+  font-size: 20px;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.mySwiper {
+  width: 100%;
+  height: 100%; /* Задаем высоту слайдера */
+}
+
+.swipItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33%; /* Задаем ширину для каждого слайда */
+  height: 100%; /* Задаем высоту для каждого слайда */
+  padding: 5px;
+  cursor: pointer;
+}
+.item {
+  width: 100%;
+  text-align: center;
+  padding: 10px 10px;
+  border-radius: 5px;
+
+  font-family: "Proxima", serif;
+  font-size: 20px;
+
+  border: 2px solid var(--main_gold);
+  color: var(--main_gold);
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+
+  &.active {
+    background-color: rgba($color: #dfbc82, $alpha: 0.9);
+    border: 2px solid transparent;
+    color: var(--main_white);
+  }
+
+  &:hover {
+    background-color: rgba($color: #dfbc82, $alpha: 0.9);
+    border: 2px solid transparent;
+    color: var(--main_white);
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  padding-left: 5px;
+}
+
+.next,
+.prev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: 40px;
+  border: 2px solid var(--main_gold);
+  color: var(--main_gold);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: rgba($color: #dfbc82, $alpha: 0.9);
+    border: 2px solid transparent;
+    color: var(--main_white);
+  }
+}
+
+.nonedate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  border: 2px solid var(--main_gold);
+  color: var(--main_gold);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: rgba($color: #dfbc82, $alpha: 0.9);
+    border: 2px solid transparent;
+    color: var(--main_white);
+  }
+}
+
+.nextStep {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 20px;
+  border: 2px solid var(--main_gold);
+  color: var(--main_gold);
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: rgba($color: #dfbc82, $alpha: 0.9);
+    border: 2px solid transparent;
+    color: var(--main_white);
+  }
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputLabel {
+  text-align: center;
+  color: var(--main_white);
+  font-family: "Proxima", serif;
+  font-size: 20px;
+}
+
+.inputBlock {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 2px solid var(--main_gold);
+  transition: border-color 0.3s ease-in-out;
+
+  & svg {
+    width: 30px;
+    height: 30px;
+    color: var(--main_gold);
+    transition: color 0.3s ease-in-out;
+  }
+
+  &:has(input:focus) {
+    border-color: var(--main_white);
+
+    svg {
+      color: var(--main_white);
+    }
+
+    input::placeholder {
+      color: var(--main_white);
+    }
+  }
+}
+
+.input {
+  width: 100%;
+  padding: 20px;
+  font-size: 20px;
+  font-family: "Proxima", serif;
+  background-color: transparent;
+  color: var(--main_white);
+
+  &::placeholder {
+    font-size: 20px;
+    font-family: "Proxima", serif;
+    color: var(--main_gold);
+    transition: color 0.3s ease-in-out;
+  }
+}
+
+.input:-webkit-autofill {
+  background-color: transparent !important;
+  color: var(--main_white) !important;
+  box-shadow: 0 0 0px 1000px white inset !important; /* Убираем фон Chrome */
+}
+
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+  background-color: transparent !important;
+  color: var(--main_white) !important;
+  box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+.communication {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.radio {
+  input {
+    display: none;
+  }
+  svg {
+    width: 40px;
+    height: 40px;
+    color: white;
+    transition: color 0.3s ease-in-out;
+  }
+  input:checked + .whatsapp,
+  input:hover + .whatsapp {
+    color: green;
+  }
+  input:checked + .telegram,
+  input:hover + .telegram {
+    color: skyblue;
+  }
+  input:checked + .phone,
+  input:hover + .phone {
+    color: rgb(13, 122, 164);
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  align-self: center;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 20px;
+  border: 2px solid var(--main_gold);
+  color: var(--main_gold);
+  transition: all 0.3s ease-in-out;
+
+  &:disabled {
+    opacity: 0.5;
+
+    & svg {
+      animation: scale 0.5s ease-in-out fill-mode;
+    }
+  }
+
+  & svg {
+    font-size: 24px;
+  }
+
+  &:hover {
+    border: 2px solid transparent;
+    background-color: var(--main_gold);
+    color: var(--main_white);
+  }
+}
+
+.agree {
+  font-family: "Proxima", serif;
+  font-size: 16px;
+  color: var(--main_white);
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes scale {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.bounce {
+  animation: bounce 0.5s ease;
+}
