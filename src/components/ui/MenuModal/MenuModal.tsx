@@ -35,7 +35,9 @@ export const MenuModal = ({ closeFn, isShowModal }: IModal) => {
         >
           <div className={styles.window}>
             <div className={styles.content}>
-              <ul className={styles.list}></ul>
+              <ul className={styles.list}>
+                <button onClick={() => closeFn()}></button>
+              </ul>
             </div>
           </div>
         </motion.div>
