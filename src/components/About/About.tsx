@@ -12,7 +12,7 @@ import { VARIANTS_FADE } from "@/constants/variants";
 export function About() {
   return (
     <section id="about" className={styles.main}>
-      <Image className={styles.image} src={"/images/about/about.jpg"} alt="About" width={200} height={200} />
+      <Image className={styles.image} src={"/images/about/about.jpeg"} alt="About" width={200} height={200} />
       <Section>
         <div className={styles.content}>
           <motion.h2

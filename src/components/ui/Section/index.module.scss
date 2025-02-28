@@ -1,6 +1,6 @@
 .section {
   display: flex;
-  min-height: 100lvh;
+  height: 100lvh;
   scroll-snap-align: center;
   perspective: 500px;
   box-shadow: 0 0 20px 2px var(--main_gold);
