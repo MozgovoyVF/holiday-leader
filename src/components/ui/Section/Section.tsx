@@ -1,12 +1,17 @@
 "use client";
 
-import React, { PropsWithChildren } from "react";
+import React, { ReactNode } from "react";
 import styles from "./index.module.scss";
 import { Container } from "../Container/Container";
 
-export function Section({ children }: PropsWithChildren) {
+interface ISection {
+  id: string;
+  children: ReactNode;
+}
+
+export function Section({ id, children }: ISection) {
   return (
-    <section className={styles.section}>
+    <section id={id} className={styles.section}>
       <Container>{children}</Container>
     </section>
   );
